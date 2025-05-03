@@ -299,7 +299,7 @@ if __name__ == '__main__':
 
     # Special case: '--sync' option
     if '--sync' in sys.argv:
-        os.system('rsync -av site/. {}:{}'.format(global_config['server'], global_config['website_root']))
+        os.system('rsync -av docs/. {}:{}'.format(global_config['server'], global_config['webdocs_root']))
         sys.exit()
 
     # Normal case: process each provided file
@@ -332,10 +332,10 @@ if __name__ == '__main__':
 
         # Make sure target directory exists
         truncated_path = os.path.split(path)[0]
-        os.system('mkdir -p {}'.format(os.path.join('site', truncated_path)))
+        os.system('mkdir -p {}'.format(os.path.join('docs', truncated_path)))
 
         # Put it in the desired location
-        out_location = os.path.join('site', path)
+        out_location = os.path.join('docs', path)
         open(out_location, 'w').write(total_file_contents)
 
     # Reset ToC
@@ -352,7 +352,7 @@ if __name__ == '__main__':
     sorted_metadatas = sorted(metadatas, key=lambda x: x['date'], reverse=True)
     feed = generate_feed(global_config, sorted_metadatas)
 
-    os.system('mkdir -p {}'.format(os.path.join('site', 'categories')))
+    os.system('mkdir -p {}'.format(os.path.join('docs', 'categories')))
 
     print("Building tables of contents...")
 
@@ -367,13 +367,13 @@ if __name__ == '__main__':
             category in metadata['categories']
         ]
         toc = make_toc(category_toc_items, global_config, categories, category)
-        open(os.path.join('site', 'categories', category+'.html'), 'w').write(toc)
+        open(os.path.join('docs', 'categories', category+'.html'), 'w').write(toc)
 
-    open('site/feed.xml', 'w').write(feed)
-    open('site/index.html', 'w').write(make_toc(homepage_toc_items, global_config, categories))
+    open('docs/feed.xml', 'w').write(feed)
+    open('docs/index.html', 'w').write(make_toc(homepage_toc_items, global_config, categories))
 
     # Copy CSS and scripts files
     this_file_directory = os.path.dirname(__file__)
-    os.system('cp -r {} site/'.format(os.path.join(this_file_directory, 'css')))
-    os.system('cp -r {} site/'.format(os.path.join(this_file_directory, 'scripts')))
-    os.system('rsync -av images site/')
+    os.system('cp -r {} docs/'.format(os.path.join(this_file_directory, 'css')))
+    os.system('cp -r {} docs/'.format(os.path.join(this_file_directory, 'scripts')))
+    os.system('rsync -av images docs/')
