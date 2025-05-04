@@ -32,6 +32,10 @@ HEADER_TEMPLATE = """
 <link rel="stylesheet" type="text/css" href="$root/css/global.css">
 <link rel="stylesheet" type="text/css" href="$root/css/misc.css">
 
+<link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
 <script type="text/x-mathjax-config">
 <script>
 MathJax = {

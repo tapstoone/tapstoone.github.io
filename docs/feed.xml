@@ -2,18 +2,36 @@
 <rss version="2.0">
 <channel>
   <title>Tapstoone's Blog</title>
-  <link>https://vitalik.ca/</link>
+  <link>https://tapstoone.xyz/</link>
   <description>Tapstoone's Blog</description>
   <image>
-      <url>http://vitalik.ca/images/icon.png</url>
+      <url>http://tapstoone.xyz/images/icon.png</url>
       <title>Tapstoone's Blog</title>
-      <link>https://vitalik.ca/</link>
+      <link>https://tapstoone.xyz/</link>
   </image>
 
 <item>
+<title>About Me</title>
+<link>https://tapstoone.xyz/general/2099/09/09/aboutme.html</link>
+<guid>https://tapstoone.xyz/general/2099/09/09/aboutme.html</guid>
+<pubDate>Wed, 09 Sep 2099 00:00:00 +0000</pubDate>
+<description></description>
+</item>
+
+
+<item>
+<title>new post</title>
+<link>https://tapstoone.xyz/general/2025/05/03/newpost.html</link>
+<guid>https://tapstoone.xyz/general/2025/05/03/newpost.html</guid>
+<pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+<description></description>
+</item>
+
+
+<item>
 <title>Simplifying the L1</title>
-<link>https://vitalik.ca/general/2025/05/03/simplel1.html</link>
-<guid>https://vitalik.ca/general/2025/05/03/simplel1.html</guid>
+<link>https://tapstoone.xyz/general/2025/05/03/simplel1.html</link>
+<guid>https://tapstoone.xyz/general/2025/05/03/simplel1.html</guid>
 <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
 <description></description>
 </item>
@@ -21,8 +39,8 @@
 
 <item>
 <title>Hello world</title>
-<link>https://vitalik.ca/general/2020/10/24/hello.html</link>
-<guid>https://vitalik.ca/general/2020/10/24/hello.html</guid>
+<link>https://tapstoone.xyz/general/2020/10/24/hello.html</link>
+<guid>https://tapstoone.xyz/general/2020/10/24/hello.html</guid>
 <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
 <description></description>
 </item>

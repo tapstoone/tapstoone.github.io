@@ -52,7 +52,7 @@ html, body {
   border-color: var(--color-divider);
 }
 
-#doc, #doc div, #doc span, #doc p, #doc li, #doc th, #doc td, #doc dd, #doc dl {
+#doc, #doc div, #doc p, #doc li, #doc th, #doc td, #doc dd, #doc dl {
   color: var(--color-text);
 }
 
@@ -73,9 +73,7 @@ html, body {
 /*
   Code blocks and formatted text
 */
-.markdown-body code, .markdown-body code *,
-#doc pre, #doc code, #doc pre code,
-#doc pre *, #doc code *, #doc pre code * {
+#doc pre:not(.hljs), #doc code:not(.hljs), .markdown-body code:not(.hljs) {
   background-color: var(--color-code-bg);
   color: var(--color-code-text);
 }
