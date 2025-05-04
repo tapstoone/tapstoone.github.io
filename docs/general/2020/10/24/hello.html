@@ -93,12 +93,16 @@ MathJax = {
   // Check for color scheme on init
   const checkColorScheme = () => {
     const colorScheme = localStorage.getItem('colorScheme');
-    // Default to dark for first view
-    if (colorScheme === null || colorScheme === undefined) localStorage.setItem('colorScheme', 'dark');
-    // If previously saved to dark, toggle switch and update colors
-    if (colorScheme === 'dark') {
+    // Default to dark mode only if no preference is set
+    if (colorScheme === null || colorScheme === undefined) {
+      localStorage.setItem('colorScheme', 'dark');
       toggle.checked = true;
       toggleDarkMode();
+    } else if (colorScheme === 'dark') {
+      toggle.checked = true;
+      toggleDarkMode();
+    } else {
+      toggle.checked = false;
     }
   }
   checkColorScheme();
@@ -117,7 +121,7 @@ MathJax = {
 <title> Hello world </title>
 
 <p>This is a blog post!</p>
-<p>Here's some code:</p>
+<p>Here’s some code:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">42</span></span></code></pre></div>

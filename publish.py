@@ -96,12 +96,16 @@ TOGGLE_COLOR_SCHEME_JS = """
   // Check for color scheme on init
   const checkColorScheme = () => {
     const colorScheme = localStorage.getItem('colorScheme');
-    // Default to dark for first view
-    if (colorScheme === null || colorScheme === undefined) localStorage.setItem('colorScheme', 'dark');
-    // If previously saved to dark, toggle switch and update colors
-    if (colorScheme === 'dark') {
+    // Default to dark mode only if no preference is set
+    if (colorScheme === null || colorScheme === undefined) {
+      localStorage.setItem('colorScheme', 'dark');
       toggle.checked = true;
       toggleDarkMode();
+    } else if (colorScheme === 'dark') {
+      toggle.checked = true;
+      toggleDarkMode();
+    } else {
+      toggle.checked = false;
     }
   }
   checkColorScheme();
@@ -253,7 +257,7 @@ def make_twitter_card(title, global_config):
 
 def defancify(text):
     return text \
-        .replace("’", "'") \
+        .replace("'","'") \
         .replace('"', '"') \
         .replace('"', '"') \
         .replace('…', '...') \
