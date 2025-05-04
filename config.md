@@ -1,4 +1,4 @@
-[title]: <> (Vitalik Buterin's website)
+[title]: <> (Tapstoone's Blog)
 [icon]: <> (http://vitalik.ca/images/icon.png)
 [server]: <> (root@vitalik.ca)
 [website_root]: <> (/var/www/html)
