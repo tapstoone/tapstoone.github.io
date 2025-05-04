@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <rss version="2.0">
 <channel>
-  <title>Vitalik Buterin's website</title>
+  <title>Tapstoone's Blog</title>
   <link>https://vitalik.ca/</link>
-  <description>Vitalik Buterin's website</description>
+  <description>Tapstoone's Blog</description>
   <image>
       <url>http://vitalik.ca/images/icon.png</url>
-      <title>Vitalik Buterin's website</title>
+      <title>Tapstoone's Blog</title>
       <link>https://vitalik.ca/</link>
   </image>
 

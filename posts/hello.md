@@ -6,7 +6,11 @@ This is a blog post!
 
 Here's some code:
 
-```python
+``` python
 def hello():
     return 42
 ```
+
+this is an image
+
+![hello wordl](../../../../images/hello/hello-world.jpeg)
